@@ -1,32 +1,7 @@
-# Data Pipeline Config Repository
+# Data Pipeline Config Repository (개발중)
 
 이 레포지토리는 **Schema Registry, Kafka Connector, Logstash pipeline** 설정 파일을 관리하고,  
 **Jenkins CI/CD 파이프라인**을 통해 자동 배포를 수행하기 위해 사용됩니다.
-
----
-
-## 📂 Repository Structure
-data-pipeline-config/
-├─ schema/
-│ ├─ v1/
-│ │ └─ serviceA-schema.json
-│ └─ v2/
-│ └─ serviceB-schema.json
-│
-├─ connector/
-│ ├─ v1/
-│ │ └─ serviceA-connector.json
-│ └─ v2/
-│ └─ serviceB-connector.json
-│
-├─ logstash/
-│ ├─ v1/
-│ │ └─ pipeline.conf
-│ └─ v2/
-│ └─ pipeline.conf
-│
-└─ README.md
-
 ---
 
 ## 🚀 Deployment Flow (with Jenkins)
@@ -38,7 +13,6 @@ data-pipeline-config/
 
 2. **Git Push**  
    - 브랜치 전략 (예: `dev`, `main`)  
-   - 버전 관리 (`v1`, `v2` 등 폴더 구조)  
 
 3. **Jenkins Pipeline 자동 실행**  
    - GitHub Webhook → Jenkins Job Trigger  
