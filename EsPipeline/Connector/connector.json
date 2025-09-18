@@ -7,11 +7,9 @@
     "value.converter": "io.confluent.connect.avro.AvroConverter",
     "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
     "value.converter.schemas.enable": "true",
-
     "errors.tolerance": "none",
     "errors.log.enable": true,
     "errors.log.include.messages": true,
-
     "topics": "kstreams",
     "connection.url": "jdbc:mysql://${MYSQL_HOST}/TEST",
     "connection.user": "${MYSQL_USER}",
