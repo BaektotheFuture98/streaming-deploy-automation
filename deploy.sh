@@ -4,7 +4,7 @@
 set -e
 
 # 서비스 목록 정의
-services=("EsPipeline")
+services=("ServiceB")
 
 for service in "${services[@]}"; do
     echo "$service"
