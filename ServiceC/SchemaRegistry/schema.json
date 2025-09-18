@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "kafkaSchemaTest",
-  "namespace": "quetta",
+  "namespace": "kafkaTest",
   "fields": [
     {"name": "wc_sitename", "type": "string"},
     {"name": "au_url", "type": "string"},
