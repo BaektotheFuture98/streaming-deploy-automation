@@ -1,0 +1,3 @@
+{
+  "schema": "{\"type\":\"record\",\"name\":\"kafkaSchemaTest\",\"namespace\":\"quetta\",\"fields\":[{\"name\":\"wc_sitename\",\"type\":\"string\"},{\"name\":\"au_url\",\"type\":\"string\"},{\"name\":\"in_write_date\",\"type\":\"int\"},{\"name\":\"kw_docid\",\"type\":\"string\"},{\"name\":\"seq\",\"type\":\"int\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"lo_seq_org\",\"type\":\"long\"},{\"name\":\"in_date\",\"type\":\"int\"},{\"name\":\"version\",\"type\":\"string\"},{\"name\":\"wc_boardname\",\"type\":\"string\"},{\"name\":\"an_title\",\"type\":\"string\"},{\"name\":\"wc_writer_nick\",\"type\":\"string\"}]}"
+}
