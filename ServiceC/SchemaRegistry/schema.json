@@ -17,5 +17,6 @@
       {"name": "an_title", "type": "string"},
       {"name": "wc_writer_nick", "type": "string"}
     ]
-  }
+  },
+  "schemaType": "JSON"
 }
