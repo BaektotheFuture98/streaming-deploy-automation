@@ -1,6 +1,4 @@
 {
-  "schema":
-  {
     "type": "record",
     "name": "SchemaTest",
     "namespace": "changeTest",
@@ -18,5 +16,4 @@
       {"name": "an_title", "type": "string"},
       {"name": "wc_writer_nick", "type": "string"}
     ]
-  }
 }
