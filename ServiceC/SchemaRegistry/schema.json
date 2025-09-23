@@ -1,6 +1,7 @@
 {
+  "schema": {
     "type": "record",
-    "name": "SchemaTest",
+    "name": "kafkaSchemaTest",
     "namespace": "changeTest",
     "fields": [
       {"name": "wc_sitename", "type": "string"},
@@ -16,4 +17,5 @@
       {"name": "an_title", "type": "string"},
       {"name": "wc_writer_nick", "type": "string"}
     ]
+  }
 }
