@@ -1,8 +1,9 @@
 {
-  "name": "JdbcSinkConnectorService",
+  "name": "JdbcSinkConnectorServiceF",
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
     "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
     "value.converter.enhanced.avro.schema.support": "true",
