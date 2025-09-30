@@ -5,7 +5,6 @@
     "tasks.max": "1",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
-    "value.subject.name.strategy": "io.confluent.kafka.serializers.subject.RecordNameStrategy",
     "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
     "value.converter.schemas.enable": "true",
     "errors.tolerance": "none",
