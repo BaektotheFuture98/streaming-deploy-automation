@@ -10,9 +10,7 @@
     "value.converter.ignore.default.values": "true",
     "value.converter.use.latest.version": "true", 
     "value.converter.latest.compatibility.strict": "false",
-    "value.converter.value.subject.name.strategy": "class io.confluent.kafka.serializers.subject.TopicNameStrategy",
-
-
+  
     "errors.tolerance": "none",
     "errors.log.enable": true,
     "errors.log.include.messages": true,
