@@ -6,7 +6,7 @@
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
     "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
-    "value.converter.schemas.enable": "true",
+    "value.converter.enhanced.avro.schema.support": "true",
     "errors.tolerance": "none",
     "errors.log.enable": true,
     "errors.log.include.messages": true,
