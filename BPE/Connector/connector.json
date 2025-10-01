@@ -1,5 +1,5 @@
 {
-  "name": "BPE_TEST_CONNECTOR",
+  "name": "BPE_TEST_CONNECT",
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
