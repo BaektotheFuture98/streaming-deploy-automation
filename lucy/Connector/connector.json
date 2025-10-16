@@ -1,24 +1,20 @@
 {
-  "name": "JdbcSinkConnectorServiceF",
+  "name": "JdbcSinkConnectorTest",
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
     "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
-    "value.converter.enhanced.avro.schema.support": "true",
-    "value.converter.ignore.default.values": "true",
-    "value.converter.use.latest.version": "true", 
-    "value.converter.latest.compatibility.strict": "false",
-  
+    "value.converter.schemas.enable": "true",
     "errors.tolerance": "none",
     "errors.log.enable": true,
     "errors.log.include.messages": true,
-    "topics": "kafkatest",
-    "connection.url": "${MYSQL_HOST}",
+    "topics": "lucy",
+    "connection.url": "jdbc:mysql://${MYSQL_HOST}/TEST",
     "connection.user": "${MYSQL_USER}",
     "connection.password": "${MYSQL_PASSWORD}",
-    "table.name.format": "kafkatest",
+    "table.name.format": "kafka_lucy",
     "auto.create": "true",
     "auto.evolve": "true"
   }
