@@ -3,7 +3,6 @@
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
-    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
     "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
     "value.converter.schemas.enable": "true",
@@ -11,7 +10,7 @@
     "errors.log.enable": true,
     "errors.log.include.messages": true,
     "topics": "lucy",
-    "connection.url": "jdbc:mysql://${MYSQL_HOST}/TEST",
+    "connection.url": "${MYSQL_HOST}",
     "connection.user": "${MYSQL_USER}",
     "connection.password": "${MYSQL_PASSWORD}",
     "table.name.format": "lucy",
