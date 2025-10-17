@@ -1,0 +1,20 @@
+{
+  "name": "anySinkConnector",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "${SCHEMA_REGISTRY}",
+    "value.converter.schemas.enable": "true",
+    "errors.tolerance": "none",
+    "errors.log.enable": true,
+    "errors.log.include.messages": true,
+    "topics": "any",
+    "connection.url": "${MYSQL_HOST}",
+    "connection.user": "${MYSQL_USER}",
+    "connection.password": "${MYSQL_PASSWORD}",
+    "table.name.format": "any_table",
+    "auto.create": "true",
+    "auto.evolve": "true"
+  }
+}
