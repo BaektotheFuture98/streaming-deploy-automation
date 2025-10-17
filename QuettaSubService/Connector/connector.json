@@ -18,7 +18,7 @@
     "connection.url": "${MYSQL_HOST}",
     "connection.user": "${MYSQL_USER}",
     "connection.password": "${MYSQL_PASSWORD}",
-    "table.name.format": "QuettaTable",
+    "table.name.format": "QuettaTable2",
     "auto.create": "true",
     "auto.evolve": "true"
   }
