@@ -1,5 +1,5 @@
 {
-  "name": "JdbcSinkConnectorServiceF",
+  "name": "QuettaServiceJdbcSinkConnector",
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
@@ -14,11 +14,11 @@
     "errors.tolerance": "none",
     "errors.log.enable": true,
     "errors.log.include.messages": true,
-    "topics": "kafkatest",
+    "topics": "quetta",
     "connection.url": "${MYSQL_HOST}",
     "connection.user": "${MYSQL_USER}",
     "connection.password": "${MYSQL_PASSWORD}",
-    "table.name.format": "kafkatest",
+    "table.name.format": "QuettaTest",
     "auto.create": "true",
     "auto.evolve": "true"
   }
