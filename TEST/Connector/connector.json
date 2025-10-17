@@ -13,7 +13,7 @@
     "connection.url": "${MYSQL_HOST}",
     "connection.user": "${MYSQL_USER}",
     "connection.password": "${MYSQL_PASSWORD}",
-    "table.name.format": "etl_test",
+    "table.name.format": "test",
     "auto.create": "true",
     "auto.evolve": "true"
   }
