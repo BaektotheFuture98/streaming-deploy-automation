@@ -1,5 +1,5 @@
 {
-  "name": "JdbcSinkConnectorTest",
+  "name": "PoCSinkConnectorTest",
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
@@ -10,11 +10,11 @@
     "errors.tolerance": "none",
     "errors.log.enable": true,
     "errors.log.include.messages": true,
-    "topics": "kafka-test",
+    "topics": "poc",
     "connection.url": "jdbc:mysql://${MYSQL_HOST}/TEST",
     "connection.user": "${MYSQL_USER}",
     "connection.password": "${MYSQL_PASSWORD}",
-    "table.name.format": "kafkaTest",
+    "table.name.format": "PoCSinkConnector",
     "auto.create": "true",
     "auto.evolve": "true"
   }
