@@ -1,2 +1,3 @@
+echo "JenkinsScript.groovy" >> .gitignore
 .env
 .JenkinsScript.groovy

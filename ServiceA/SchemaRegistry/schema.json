@@ -1,0 +1,39 @@
+{
+	"type": "record",
+    "namespace": "bpe",
+	"name": "BPE_DATA",
+	"fields": [
+		{
+			"name": "wc_sitename",
+			"type": "string"
+		},
+		{
+			"name": "in_write_date",
+			"type": "int"
+		},
+		{
+			"name": "kw_docid",
+			"type": "string"
+		},
+		{
+			"name": "timestamp",
+			"type": "string"
+		},
+		{
+			"name": "in_date",
+			"type": "int"
+		},
+		{
+			"name": "wc_boardname",
+			"type": "string"
+		},
+		{
+			"name": "an_title",
+			"type": "string"
+		},
+		{
+			"name": "wc_writer_nick",
+			"type": "string"
+		}
+	]
+}
