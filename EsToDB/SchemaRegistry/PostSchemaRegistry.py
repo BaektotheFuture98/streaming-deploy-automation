@@ -16,7 +16,7 @@ def read_schema_json(schema_json_path : pathlib.Path):
     return schema_json_path.read_text(encoding="utf-8")
 
 def post_schema_to_registry(subject_name : str, avro_schema : str, client : SchemaRegistryClient) -> int: 
-    schema_id = client.register(subject_name, avro_schema) 
+    schema_id = client.register(subject_name+"-value", avro_schema) 
     return schema_id
 
 def main() : 
@@ -28,7 +28,7 @@ def main() :
     
     subject_name = os.getenv("SERVICE_NAME")
     schema_id = post_schema_to_registry(subject_name, schema_file_content, client)
-    print(schema_id)
+    print(schema_id) # Jenkins 에서 사용하기 위해 출력
 
     return schema_id
 
