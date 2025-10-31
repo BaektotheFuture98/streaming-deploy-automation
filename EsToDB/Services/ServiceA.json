@@ -1,5 +1,5 @@
 {
-    "PROJECT_NAME" : "EsToDB",
+    "SERVICE_NAME" : "EsToDB",
     "MYSQL_HOST": "${MYSQL_HOST}",
     "TABLE": "testTable",
     "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250731",
