@@ -21,7 +21,7 @@ def post_schema_to_registry(subject_name : str, avro_schema : str, client : Sche
 
 def main() : 
     schema_registry_path = os.getenv("SCHEMA_REGISTRY")
-    client = schema_registry_client(schema_registry_path) 
+    client = schema_registry_client(schema_registry_path)
 
     schema_file_path = get_schema_json_path()
     schema_file_content = read_schema_json(schema_file_path)   
