@@ -1,0 +1,12 @@
+{
+    "SERVICE_NAME" : "EsToDB",
+    "TABLE": "testTable",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250731",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
