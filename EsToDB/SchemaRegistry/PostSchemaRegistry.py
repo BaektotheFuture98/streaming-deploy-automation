@@ -8,14 +8,13 @@ def schema_registry_client(schema_url : str = None) -> SchemaRegistryClient :
 
 def get_schema_json_path() -> pathlib.Path: 
     schema_json = os.getenv("SCHEMA_FILE")
-    print(f"schema_json path from env: {schema_json}")
     # schema_json = list(pathlib.Path(__file__).resolve().parent.glob("schema.json"))
     if not schema_json : 
         raise FileNotFoundError("schema.json file not exist")
-    return schema_json[0]
+    return schema_json
 
-def read_schema_json(schema_json_path : pathlib.Path): 
-    return schema_json_path.read_text(encoding="utf-8")
+def read_schema_json(schema_json_path : str): 
+    return pathlib.Path(schema_json_path).read_text(encoding="utf-8")
 
 def post_schema_to_registry(subject_name : str, avro_schema : str, client : SchemaRegistryClient) -> int: 
     schema_id = client.register(subject_name+"-value", avro_schema) 
