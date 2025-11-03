@@ -17,7 +17,7 @@ def read_schema_json(schema_json_path : str):
     return pathlib.Path(schema_json_path).read_text(encoding="utf-8")
 
 def post_schema_to_registry(subject_name : str, avro_schema : str, client : SchemaRegistryClient) -> int: 
-    schema_id = client.register(subject_name+"-value", avro_schema) 
+    schema_id = client.register(subject_name+"-topic-value", avro_schema) 
     return schema_id
 
 def main() : 
