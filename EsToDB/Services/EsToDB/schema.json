@@ -1,7 +1,7 @@
 {
 	"type": "record",
     "namespace": "bpe",
-	"name": "BPE_DATA",
+	"name": "${SERVICE_NAME}",
 	"fields": [
 		{
 			"name": "wc_sitename",
