@@ -8,6 +8,7 @@ def schema_registry_client(schema_url : str = None) -> SchemaRegistryClient :
 
 def get_schema_json_path() -> pathlib.Path: 
     schema_json = os.getenv("schemaFile")
+    print(f"schema_json path from env: {schema_json}")
     # schema_json = list(pathlib.Path(__file__).resolve().parent.glob("schema.json"))
     if not schema_json : 
         raise FileNotFoundError("schema.json file not exist")
