@@ -1,0 +1,12 @@
+{
+    "SERVICE_NAME": "noname",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250731",
+    "TABLE": "noname",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
