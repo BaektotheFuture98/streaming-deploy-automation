@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "name": "fastAPI_Project_number2",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "in_date",
+            "type": "int"
+        },
+        {
+            "name": "kw_docid",
+            "type": "string"
+        },
+        {
+            "name": "an_content",
+            "type": "string"
+        }
+    ]
+}
