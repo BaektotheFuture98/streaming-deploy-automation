@@ -1,7 +1,7 @@
 {
-    "SERVICE_NAME" : "TEST_ETL",
-    "TABLE": "seonmin",
+    "SERVICE_NAME": "fastAPI_Project",
     "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250731",
+    "TABLE": "fastAPI_Project",
     "QUERY": {
         "query": {
             "query_string": {

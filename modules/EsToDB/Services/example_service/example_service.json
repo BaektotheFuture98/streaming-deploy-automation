@@ -1,0 +1,13 @@
+{
+    "SERVICE_NAME" : "<service_name>",
+    "TABLE": "<mysql_table>",
+    "MYSQL_HOST": "jdbc:mysql://<mysql_ip>:3306/<mysql_db>",
+    "ELASTICSEARCH_INDEX": "<elasticsearch_index>",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "exmaple"
+            }
+        }
+    }
+}
