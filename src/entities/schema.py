@@ -10,7 +10,7 @@ class Schema(BaseModel) :
     table : str
     # user : str
     # password : str
-    elasticsearch_index : str = "media_search_t_2025_v1"
+    elasticsearch_index : str = "lucy_main_bac1_20250831"
     fields : list[str]
 
     @field_validator("fields")

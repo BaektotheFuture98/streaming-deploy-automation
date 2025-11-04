@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "seonmin_test_2",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "in_date",
+            "type": "int"
+        }
+    ]
+}

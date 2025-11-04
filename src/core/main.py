@@ -23,7 +23,7 @@ def register_schema(schema: Schema):
         update_service_in_bash("modules/deploy.sh", schema.project_name)
 
         # git 배포
-        git_push_main(f"fix : {schema.project_name}")
+        git_push_main(f"add : {schema.project_name}")
 
         return {"message": "Schema and metadata files created successfully"}
     except Exception as e:
