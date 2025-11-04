@@ -1,0 +1,12 @@
+{
+    "SERVICE_NAME": "test_project2",
+    "ELASTICSEARCH_INDEX": "index_1",
+    "TABLE": "test_table",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
