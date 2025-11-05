@@ -1,0 +1,18 @@
+{
+    "type": "record",
+    "name": "service_test",
+    "fields": [
+        {
+            "name": "in_date",
+            "type": "int"
+        },
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "kw_docid",
+            "type": "string"
+        }
+    ]
+}
