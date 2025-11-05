@@ -19,11 +19,11 @@ def register_schema(schema: Schema):
         
         os.makedirs(f"{base_path}/{schema.project_name}", exist_ok=True)        # 스키마 파일 변환 구현
         schema_data = set_fields(schema)  # 데이터 스키마 설정파일 구현
-        make_file(f"modules/EsToDB/Services/{schema.project_name}/schema.json", schema_data)
+        make_file(f"{base_path}/{schema.project_name}/schema.json", schema_data)
 
         # 메타데이터 설정파일 구현
         meta_data = set_meta(schema)
-        make_file(f"modules/EsToDB/Services/{schema.project_name}/{schema.project_name}.json", meta_data)
+        make_file(f"{base_path}/{schema.project_name}/{schema.project_name}.json", meta_data)
 
         # deploy.py 파일 수정
         update_service_in_bash("modules/deploy.sh", schema.project_name)
