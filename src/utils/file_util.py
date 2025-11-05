@@ -45,6 +45,7 @@ def get_unique_project_name(base_path, project_name, pad_width=3):
     counter = 1
 
     while unique_name in existing_names:
+        unique_name = f"{project_name}_{counter}"
         counter += 1
 
     return counter
