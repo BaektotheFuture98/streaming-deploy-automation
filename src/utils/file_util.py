@@ -35,7 +35,7 @@ def update_service_in_bash(script_path: str, service_name: str) -> None:
     except Exception as e:
         print(f"⚠️ 업데이트 중 오류 발생: {e}")
 
-def get_unique_project_name(base_path, project_name, pad_width=3):
+def get_unique_project_name(base_path, project_name, pad_width=3) -> int:
     """
     이미 존재하는 project_name이면 -001, -002 ... 붙여서 고유하게 반환
     pad_width: 숫자 패딩 길이 (기본 3자리)
@@ -48,4 +48,4 @@ def get_unique_project_name(base_path, project_name, pad_width=3):
         unique_name = f"{project_name}-{str(counter).zfill(pad_width)}"
         counter += 1
 
-    return unique_name
+    return counter
