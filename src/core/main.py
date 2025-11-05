@@ -12,9 +12,10 @@ def register_schema(schema: Schema):
     try:
         base_path = "modules/EsToDB/Services"
         # 고유 project_name 생성
-        unique_project_name = get_unique_project_name(base_path, schema.project_name)
-        schema.project_name = unique_project_name
-        os.makedirs(f"{base_path}/{unique_project_name}", exist_ok=True)        # 스키마 파일 변환 구현
+        counter = get_unique_project_name(base_path, schema.project_name)
+        schema.project_name = f"{schema.project_name}_{str(counter).zfill(3)}"
+        
+        os.makedirs(f"{base_path}/{schema.project_name}", exist_ok=True)        # 스키마 파일 변환 구현
         schema_data = set_fields(schema)  # 데이터 스키마 설정파일 구현
         make_file(f"modules/EsToDB/Services/{schema.project_name}/schema.json", schema_data)
 
