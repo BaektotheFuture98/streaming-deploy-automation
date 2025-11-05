@@ -35,13 +35,17 @@ def update_service_in_bash(script_path: str, service_name: str) -> None:
     except Exception as e:
         print(f"⚠️ 업데이트 중 오류 발생: {e}")
 
-def get_unique_project_name(base_path, project_name):
+def get_unique_project_name(base_path, project_name, pad_width=3):
     """
-    이미 존재하는 project_name이면 -1, -2 ... 붙여서 고유하게 반환
+    이미 존재하는 project_name이면 -001, -002 ... 붙여서 고유하게 반환
+    pad_width: 숫자 패딩 길이 (기본 3자리)
     """
+    existing_names = set(os.listdir(base_path))
     unique_name = project_name
     counter = 1
-    while os.path.exists(os.path.join(base_path, unique_name)):
-        unique_name = f"{project_name}-{counter}"
+
+    while unique_name in existing_names:
+        unique_name = f"{project_name}-{str(counter).zfill(pad_width)}"
         counter += 1
+
     return unique_name
