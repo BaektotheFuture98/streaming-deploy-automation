@@ -5,11 +5,11 @@ schema_field = ["an_title" ,"in_date", "kw_docid", "an_content"]
 class Schema(BaseModel) : 
     project_name : str
     query : dict
-    # host : str
-    # database : str
+    host : str
+    database : str
     table : str
-    # user : str
-    # password : str
+    user : str
+    password : str
     elasticsearch_index : str = "lucy_main_bac1_20250831"
     fields : list[str]
 

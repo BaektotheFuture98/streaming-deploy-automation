@@ -3,9 +3,9 @@ import json
 
 def set_meta(schema: Schema) -> json: 
     meta = {}
-    # meta["MYSQL_HOST"] = schema.host + "/" + schema.database
-    # meta["MYSQL_USER"] = schema.user
-    # meta["MYSQL_PASSWORD"] = schema.password
+    meta["MYSQL_HOST"] = schema.host + "/" + schema.database
+    meta["MYSQL_USER"] = schema.user
+    meta["MYSQL_PASSWORD"] = schema.password
     meta["SERVICE_NAME"] = schema.project_name
     meta["ELASTICSEARCH_INDEX"] = schema.elasticsearch_index
     meta["TABLE"] = schema.table
