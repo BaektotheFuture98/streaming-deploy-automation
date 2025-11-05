@@ -4,7 +4,7 @@
 set -e
 
 # 활성화된 서비스 목록 정의 (예: "BPE", "SERVICE2", "SERVICE3")
-services=("seonmin_project_test-004")
+services=("seonmin_project_test-005")
 
 for service in "${services[@]}"; do
     echo "$service"
