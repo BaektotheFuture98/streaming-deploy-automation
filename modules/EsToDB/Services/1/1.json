@@ -1,0 +1,15 @@
+{
+    "MYSQL_HOST": "111.111/1",
+    "MYSQL_USER": "1",
+    "MYSQL_PASSWORD": "1",
+    "SERVICE_NAME": "1",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
+    "TABLE": "1",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "1"
+            }
+        }
+    }
+}
