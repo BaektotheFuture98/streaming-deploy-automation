@@ -50,5 +50,6 @@ def get_unique_project_name(base_path, project_name):
         print(f"unique_name : {unique_name} counter : {counter}")
         counter += 1
         
+    print(f"아래 서비스는 등록 안되어 있음 \n버전 : f{counter}\nunique_name : {unique_name} counter : {counter}")
 
     return counter
