@@ -42,6 +42,7 @@ def get_unique_project_name(base_path, project_name, pad_width=3):
     """
     existing_names = set(os.listdir(base_path))
     unique_name = project_name
+    print(f"project_name : {project_name}")
     counter = 1
 
     while unique_name in existing_names:
