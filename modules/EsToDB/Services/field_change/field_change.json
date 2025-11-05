@@ -1,0 +1,15 @@
+{
+    "MYSQL_HOST": "192.l68.125.61/TEST",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "dkfdptmdps404",
+    "SERVICE_NAME": "field_change",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
+    "TABLE": "field_change",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
