@@ -13,7 +13,7 @@ def register_schema(schema: Schema):
         base_path = "modules/EsToDB/Services"
         # 고유 project_name 생성
         counter = get_unique_project_name(base_path, schema.project_name)
-        schema.project_name = f"{schema.project_name}-{counter}"
+        schema.project_name = f"{schema.project_name}-{counter-1}"
         schema.table = f"{schema.table}-{counter}"
         os.makedirs(f"{base_path}/{schema.project_name}", exist_ok=True)        # 스키마 파일 변환 구현
         schema_data = set_fields(schema)  # 데이터 스키마 설정파일 구현

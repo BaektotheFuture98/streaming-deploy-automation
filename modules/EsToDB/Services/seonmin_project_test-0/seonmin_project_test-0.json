@@ -1,0 +1,12 @@
+{
+    "SERVICE_NAME": "seonmin_project_test-0",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
+    "TABLE": "seonmin_table_check-1",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
