@@ -1,4 +1,4 @@
-import json, re
+import json, re, os
 
 def make_file(path: str, content: json) -> None: 
     with open(path, "w", encoding="utf-8") as f: 
@@ -34,3 +34,14 @@ def update_service_in_bash(script_path: str, service_name: str) -> None:
         print(f"❌ 파일을 찾을 수 없습니다: {script_path}")
     except Exception as e:
         print(f"⚠️ 업데이트 중 오류 발생: {e}")
+
+def get_unique_project_name(base_path, project_name):
+    """
+    이미 존재하는 project_name이면 -1, -2 ... 붙여서 고유하게 반환
+    """
+    unique_name = project_name
+    counter = 1
+    while os.path.exists(os.path.join(base_path, unique_name)):
+        unique_name = f"{project_name}-{counter}"
+        counter += 1
+    return unique_name
