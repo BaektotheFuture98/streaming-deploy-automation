@@ -55,4 +55,5 @@ def get_unique_project_name(base_path: str, project_name: str, counter: int = 1,
     if unique_name in existing:
         return get_unique_project_name(base_path, project_name, counter + 1, pad_width)
     else:
+        print(f"project_name : {project_name}, counter : {counter}")
         return counter
