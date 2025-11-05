@@ -1,9 +1,13 @@
 {
     "type": "record",
-    "name": "field-seonmin",
+    "name": "sj_first_test",
     "fields": [
         {
             "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "an_content",
             "type": "string"
         },
         {
