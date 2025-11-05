@@ -53,7 +53,8 @@ def get_unique_project_name(base_path: str, project_name: str, counter: int = 1,
 
     # 이미 존재한다면 counter를 증가시키고 재귀 호출
     if unique_name in existing:
+        print(f"존재함 => project_name : {project_name}, counter : {counter}")
         return get_unique_project_name(base_path, project_name, counter + 1, pad_width)
     else:
-        print(f"project_name : {project_name}, counter : {counter}")
+        print(f"존재 하지 않음 => project_name : {project_name}, counter : {counter}")
         return counter
