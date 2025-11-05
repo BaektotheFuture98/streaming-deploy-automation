@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "name": "sj_test_01",
+    "fields": [
+        {
+            "name": "kw_docid",
+            "type": "string"
+        },
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "an_content",
+            "type": "string"
+        },
+        {
+            "name": "in_date",
+            "type": "int"
+        }
+    ]
+}
