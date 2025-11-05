@@ -44,7 +44,7 @@ def get_unique_project_name(base_path: str, project_name: str, counter: int = 1,
     """
     # 존재하는 항목 목록 가져오기
     existing = set(os.listdir(base_path)) if os.path.isdir(base_path) else set()
-
+    print(f"counter : {counter} \n existing : {existing}")
     # counter가 1이면 원래 이름 검사, 2 이상이면 -001 형태로 검사
     if counter == 1:
         unique_name = project_name
