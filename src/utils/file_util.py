@@ -49,7 +49,7 @@ def get_unique_project_name(base_path: str, project_name: str, counter: int = 1,
     if counter == 1:
         unique_name = project_name
     else:
-        unique_name = f"{project_name}_{str(counter-1).zfill(pad_width)}"
+        unique_name = f"{project_name}_{str(counter).zfill(pad_width)}"
 
     # 이미 존재한다면 counter를 증가시키고 재귀 호출
     if unique_name in existing:
