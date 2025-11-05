@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "test_project3-001",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "in_date",
+            "type": "int"
+        }
+    ]
+}
