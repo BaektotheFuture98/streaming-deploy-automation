@@ -1,0 +1,12 @@
+{
+    "SERVICE_NAME": "seonmin_duplication_check",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
+    "TABLE": "seonmin_duplication_check",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
