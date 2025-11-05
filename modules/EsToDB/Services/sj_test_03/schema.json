@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "name": "sj_test_03",
+    "fields": [
+        {
+            "name": "kw_docid",
+            "type": "string"
+        }
+    ]
+}
