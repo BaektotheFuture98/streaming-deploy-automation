@@ -34,4 +34,3 @@ def set_fields(schema: Schema) -> json:
     data_schema["fields"] = fields
 
     return json.dumps(data_schema, ensure_ascii=False, indent=4)
-
