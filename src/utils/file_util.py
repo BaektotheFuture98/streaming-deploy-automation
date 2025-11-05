@@ -35,21 +35,20 @@ def update_service_in_bash(script_path: str, service_name: str) -> None:
     except Exception as e:
         print(f"⚠️ 업데이트 중 오류 발생: {e}")
 
-def get_unique_project_name(base_path, project_name):
+def get_unique_project_name(base_path: str, project_name: str, pad_width: int = 3) -> int:
     """
-    이미 존재하는 project_name이면 -001, -002 ... 붙여서 고유하게 반환
-    pad_width: 숫자 패딩 길이 (기본 3자리)
+    이미 존재하는 project_name이면 -001, -002 ... 붙여서 고유하게 만들기 위한 counter 반환
+    counter = 1  → project_name 그대로 사용
+    counter = 2  → project_name-001
+    counter = 3  → project_name-002
     """
-    existing_names = set(os.listdir(base_path))
-    unique_name = project_name
-    print(f"project_name : {project_name}")
     counter = 1
+    existing_names = set(os.listdir(base_path))
 
+    # 현재 이름이 이미 존재하면 계속 증가
+    unique_name = project_name
     while unique_name in existing_names:
-        unique_name = f"{project_name}_{str(counter).zfill(3)}"
-        print(f"unique_name : {unique_name} counter : {counter}")
+        unique_name = f"{project_name}_{str(counter).zfill(pad_width)}"
         counter += 1
-        
-    print(f"아래 서비스는 등록 안되어 있음 \n버전 : f{counter}\nunique_name : {unique_name} counter : {counter}")
 
     return counter
