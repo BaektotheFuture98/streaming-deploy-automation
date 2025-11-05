@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "sj_test",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "in_date",
+            "type": "int"
+        }
+    ]
+}
