@@ -1,0 +1,15 @@
+{
+    "MYSQL_HOST": "192.168.125.61/TEST",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "dkfdptmdps404",
+    "SERVICE_NAME": "fix_logstash_error",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
+    "TABLE": "logstash_error",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "{\n        \"query\": {\n            \"query_string\": {\n                \"query\": \"*\"\n            }\n        }\n    }"
+            }
+        }
+    }
+}

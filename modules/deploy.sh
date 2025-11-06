@@ -4,7 +4,7 @@
 set -e
 
 # 활성화된 서비스 목록 정의 (예: "BPE", "SERVICE2", "SERVICE3")
-services=("new_test")
+services=("fix_logstash_error")
 
 for service in "${services[@]}"; do
     echo "$service"

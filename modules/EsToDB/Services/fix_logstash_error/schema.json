@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "fix_logstash_error",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "an_content",
+            "type": "string"
+        }
+    ]
+}
