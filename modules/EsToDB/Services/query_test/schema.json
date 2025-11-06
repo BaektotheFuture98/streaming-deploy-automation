@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "query_test",
+    "fields": [
+        {
+            "name": "an_content",
+            "type": "string"
+        },
+        {
+            "name": "an_title",
+            "type": "string"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "MYSQL_HOST": "192.168.125.61/TEST",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "dkfdptmdps404",
+    "SERVICE_NAME": "query_test",
+    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
+    "TABLE": "qeury",
+    "QUERY": {
+        "query": {
+            "query_string": {
+                "query": "*"
+            }
+        }
+    }
+}
