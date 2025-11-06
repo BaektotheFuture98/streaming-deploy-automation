@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from src.entities.schema import Schema
+from src.entities.status import Status
 from src.utils.file_util import make_file, update_service_in_bash,get_unique_project_name
 from src.services.metadata_schema import set_fields, set_meta
 from src.services.git_command import git_push_main
@@ -36,9 +37,17 @@ def register_schema(schema: Schema):
         raise HTTPException(status_code=500, detail=str(e))
     
 
-# @app.get("/status")
-# def get_status(): 
+# @app.post("/status")
+# def get_status(status : Status): 
 #     # jenkins: 서비스 상태 확인용 엔드포인트
+#     try :
+#         project_name = status.project_name
+#         health = status.health
+#         service = status.service
+
+        
+#     except Exception as e : 
+#         raise HTTPException(status_code=500, detail=e)        
 #     return {"status": "Service is running"}
 
 # @app.post("/restart") 
