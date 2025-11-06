@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "name": "new_test",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "in_date",
+            "type": "int"
+        },
+        {
+            "name": "an_content",
+            "type": "string"
+        },
+        {
+            "name": "kw_docid",
+            "type": "string"
+        }
+    ]
+}
