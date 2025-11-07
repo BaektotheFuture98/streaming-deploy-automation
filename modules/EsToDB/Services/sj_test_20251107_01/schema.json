@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "sj_test_20251107_01",
+    "fields": [
+        {
+            "name": "an_title",
+            "type": "string"
+        },
+        {
+            "name": "an_content",
+            "type": "string"
+        }
+    ]
+}
