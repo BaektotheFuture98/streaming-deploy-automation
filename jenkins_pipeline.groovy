@@ -11,11 +11,11 @@ pipeline {
         KAFKA_BOOTSTRAP_SERVERS="192.168.125.61:9092"
 
         ELASTICSEARCH_USER="elastic"
-        ELASTICSEARCH_PASSWORD="****"   // ← 마스킹
+        ELASTICSEARCH_PASSWORD="****"
 
         MYSQL_HOST="jdbc:mysql://192.168.125.61:3306/TEST"
         MYSQL_USER="root"
-        MYSQL_PASSWORD="****"           // ← 마스킹
+        MYSQL_PASSWORD="****"
 
         KAFKASTORE_BOOTSTRAP_SERVERS="PLAINTEXT://192.168.125.61:9092,PLAINTEXT://192.168.125.62:9092"
         LOGSTASH_SERVER="192.168.25.24"
