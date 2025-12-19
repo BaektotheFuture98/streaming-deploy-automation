@@ -63,7 +63,7 @@
 | **템플릿 엔진** | envsubst / Bash Script | Logstash & Connector 설정 파일 환경변수 기반 템플릿화 |
 | **배포 자동화 스크립트** | Python | 스키마 등록 |
 | **버전 관리** | GitHub | 메타데이터/파이프라인 템플릿 변경 이력 관리 |
-> 🚧 현재 이 프로젝트는 **DAG Factory 기반 파이프라인으로 전환 중**입니다.
+> 🚧 현재 이 프로젝트는 **Airflow 기반 파이프라인으로 전환 중**입니다.
 
 ## 👨‍💻 Maintainers
 - SEONMIN
