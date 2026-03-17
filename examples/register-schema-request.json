@@ -1,0 +1,28 @@
+{
+    "project_name": "example_service",
+    "query": {
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "an_title": "streaming automation"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "host": "jdbc:mysql://mysql.example.internal:3306",
+    "database": "APP_DB",
+    "table": "example_service_table",
+    "user": "app_writer",
+    "password": "replace-with-secret",
+    "elasticsearch_index": "example-index-*",
+    "fields": [
+        "an_title",
+        "in_date",
+        "kw_docid",
+        "an_content"
+    ]
+}

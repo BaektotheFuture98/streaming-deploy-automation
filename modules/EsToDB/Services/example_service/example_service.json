@@ -1,12 +1,20 @@
 {
-    "SERVICE_NAME" : "<service_name>",
-    "TABLE": "<mysql_table>",
-    "MYSQL_HOST": "jdbc:mysql://<mysql_ip>:3306/<mysql_db>",
-    "ELASTICSEARCH_INDEX": "<elasticsearch_index>",
+    "SERVICE_NAME": "example_service",
+    "TABLE": "example_service_table",
+    "MYSQL_HOST": "jdbc:mysql://mysql.example.internal:3306/APP_DB",
+    "MYSQL_USER": "app_writer",
+    "MYSQL_PASSWORD": "replace-with-secret",
+    "ELASTICSEARCH_INDEX": "example-index-*",
     "QUERY": {
         "query": {
-            "query_string": {
-                "query": "exmaple"
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "an_title": "streaming automation"
+                        }
+                    }
+                ]
             }
         }
     }

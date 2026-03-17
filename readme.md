@@ -18,6 +18,47 @@
 
 > ✅ **핵심 목표: 메타데이터만 업데이트하면, 파이프라인이 자동으로 생성되고 실행되는 환경 구축**
 
+## 빠르게 이해하기
+이 저장소는 크게 두 흐름으로 구성됩니다.
+
+1. API가 서비스 메타데이터를 생성합니다.
+   - [`src/core/main.py`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/src/core/main.py) 의 `/register` 엔드포인트가 입력 payload를 받아
+   - [`modules/EsToDB/Services/<service>/schema.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/schema.json) 과
+   - [`modules/EsToDB/Services/<service>/<service>.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/example_service.json) 을 생성합니다.
+2. Jenkins가 생성된 메타데이터를 배포합니다.
+   - [`modules/deploy.sh`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/deploy.sh) 에 적힌 서비스 목록을 읽고
+   - [`jenkins.groovy`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/jenkins.groovy) 가 Schema Registry 등록, Logstash 설정 생성, Kafka Connector 배포를 순서대로 수행합니다.
+
+## 주요 디렉터리
+| 경로 | 역할 |
+|------|------|
+| `src/core` | FastAPI 엔드포인트와 서비스 등록 진입점 |
+| `src/services` | 메타데이터 및 스키마 JSON 생성 로직 |
+| `src/utils` | 파일 생성, 서비스명 갱신 등 보조 유틸리티 |
+| `modules/EsToDB/SchemaRegistry` | Avro 스키마 등록 스크립트 |
+| `modules/EsToDB/Logstash` | Logstash 템플릿 |
+| `modules/EsToDB/Connector` | Kafka Connect JDBC Sink 템플릿 |
+| `modules/EsToDB/Services` | 서비스별 스키마/메타데이터 예시 |
+
+## 예시 파일
+- 서비스 메타데이터 예시: [`modules/EsToDB/Services/example_service/example_service.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/example_service.json)
+- 서비스 스키마 예시: [`modules/EsToDB/Services/example_service/schema.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/schema.json)
+- API 요청 payload 예시: [`examples/register-schema-request.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/examples/register-schema-request.json)
+- Jenkins 환경 변수 예시: [`jenkins.env.example`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/jenkins.env.example)
+
+## 서비스 등록 예시
+FastAPI 서버 실행 후 아래 payload를 `/register` 로 보내면 새 서비스용 메타데이터를 생성합니다.
+
+```bash
+uvicorn src.core.main:app --reload
+```
+
+```bash
+curl -X POST http://127.0.0.1:8000/register \
+  -H 'Content-Type: application/json' \
+  -d @examples/register-schema-request.json
+```
+
 ---
 
 ## 주요 동작 방식
@@ -64,6 +105,11 @@
 | **배포 자동화 스크립트** | Python | 스키마 등록 |
 | **버전 관리** | GitHub | 메타데이터/파이프라인 템플릿 변경 이력 관리 |
 > 🚧 현재 이 프로젝트는 **Airflow 기반 파이프라인으로 전환 중**입니다.
+
+## 보안 메모
+- 저장소에는 실제 운영 계정, 비밀번호, 내부 IP를 넣지 않고 예시 값만 유지합니다.
+- Jenkins 실행 시 필요한 값은 [`jenkins.env.example`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/jenkins.env.example) 를 기준으로 외부 환경변수나 Jenkins Credentials에 주입하는 것을 권장합니다.
+- `modules/EsToDB/Services` 아래 JSON은 구조 예시로 보고, 실제 운영값은 커밋 전에 반드시 placeholder 또는 비밀 저장소 참조 값으로 치환하세요.
 
 ## 👨‍💻 Maintainers
 - SEONMIN

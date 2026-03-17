@@ -1,5 +1,8 @@
 .env
+.env.*
+!.env.example
 .JenkinsScript.groovy
+jenkins.env
 
 # UV 관련
 .venv/

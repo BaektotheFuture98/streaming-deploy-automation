@@ -1,15 +1,13 @@
 {
-    "MYSQL_HOST": "192.168.125.61/TEST",
-    "MYSQL_USER": "root",
-    "MYSQL_PASSWORD": "dkfdptmdps404",
     "SERVICE_NAME": "new_test",
-    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
     "TABLE": "new_test_table",
+    "MYSQL_HOST": "jdbc:mysql://mysql.example.internal:3306/APP_DB",
+    "MYSQL_USER": "app_writer",
+    "MYSQL_PASSWORD": "replace-with-secret",
+    "ELASTICSEARCH_INDEX": "example-index-*",
     "QUERY": {
         "query": {
-            "query_string": {
-                "query": "{\n  \"query\": {\n    \"match\": {\n      \"an_title\": \"*\"\n    }\n  }\n}"
-            }
+            "match_all": {}
         }
     }
 }

@@ -1,15 +1,13 @@
 {
-    "MYSQL_HOST": "111.111/1",
-    "MYSQL_USER": "1",
-    "MYSQL_PASSWORD": "1",
     "SERVICE_NAME": "1",
-    "ELASTICSEARCH_INDEX": "lucy_main_bac1_20250831",
-    "TABLE": "1",
+    "TABLE": "1_table",
+    "MYSQL_HOST": "jdbc:mysql://mysql.example.internal:3306/APP_DB",
+    "MYSQL_USER": "app_writer",
+    "MYSQL_PASSWORD": "replace-with-secret",
+    "ELASTICSEARCH_INDEX": "example-index-*",
     "QUERY": {
         "query": {
-            "query_string": {
-                "query": "1"
-            }
+            "match_all": {}
         }
     }
 }
