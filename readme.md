@@ -22,12 +22,12 @@
 이 저장소는 크게 두 흐름으로 구성됩니다.
 
 1. API가 서비스 메타데이터를 생성합니다.
-   - [`src/core/main.py`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/src/core/main.py) 의 `/register` 엔드포인트가 입력 payload를 받아
-   - [`modules/EsToDB/Services/<service>/schema.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/schema.json) 과
-   - [`modules/EsToDB/Services/<service>/<service>.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/example_service.json) 을 생성합니다.
+   - [`src/core/main.py`](src/core/main.py) 의 `/register` 엔드포인트가 입력 payload를 받아
+   - [`modules/EsToDB/Services/<service>/schema.json`](modules/EsToDB/Services/example_service/schema.json) 과
+   - [`modules/EsToDB/Services/<service>/<service>.json`](modules/EsToDB/Services/example_service/example_service.json) 을 생성합니다.
 2. Jenkins가 생성된 메타데이터를 배포합니다.
-   - [`modules/deploy.sh`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/deploy.sh) 에 적힌 서비스 목록을 읽고
-   - [`jenkins.groovy`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/jenkins.groovy) 가 Schema Registry 등록, Logstash 설정 생성, Kafka Connector 배포를 순서대로 수행합니다.
+   - [`modules/deploy.sh`](modules/deploy.sh) 에 적힌 서비스 목록을 읽고
+   - [`jenkins.groovy`](jenkins.groovy) 가 Schema Registry 등록, Logstash 설정 생성, Kafka Connector 배포를 순서대로 수행합니다.
 
 ## 주요 디렉터리
 | 경로 | 역할 |
@@ -41,10 +41,10 @@
 | `modules/EsToDB/Services` | 서비스별 스키마/메타데이터 예시 |
 
 ## 예시 파일
-- 서비스 메타데이터 예시: [`modules/EsToDB/Services/example_service/example_service.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/example_service.json)
-- 서비스 스키마 예시: [`modules/EsToDB/Services/example_service/schema.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/modules/EsToDB/Services/example_service/schema.json)
-- API 요청 payload 예시: [`examples/register-schema-request.json`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/examples/register-schema-request.json)
-- Jenkins 환경 변수 예시: [`jenkins.env.example`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/jenkins.env.example)
+- 서비스 메타데이터 예시: [`modules/EsToDB/Services/example_service/example_service.json`](modules/EsToDB/Services/example_service/example_service.json)
+- 서비스 스키마 예시: [`modules/EsToDB/Services/example_service/schema.json`](modules/EsToDB/Services/example_service/schema.json)
+- API 요청 payload 예시: [`examples/register-schema-request.json`](examples/register-schema-request.json)
+- Jenkins 환경 변수 예시: [`jenkins.env.example`](jenkins.env.example)
 
 예시 파일에 들어 있는 `mysql.example.internal`, `connect.example.internal`, `schema-registry.example.internal` 같은 주소는 실제 접속 주소가 아니라 저장소 공개용 placeholder 입니다. 그대로는 접속되지 않으며, 운영 환경에서는 실제 내부 주소나 Jenkins Credentials 값으로 바꿔서 사용해야 합니다.
 
@@ -114,7 +114,7 @@ curl -X POST http://127.0.0.1:8000/register \
 
 ## 보안 메모
 - 저장소에는 실제 운영 계정, 비밀번호, 내부 IP를 넣지 않고 예시 값만 유지합니다.
-- Jenkins 실행 시 필요한 값은 [`jenkins.env.example`](/Users/seonminbaek/sideproject/streaming-automation/streaming-deploy-automation/jenkins.env.example) 를 기준으로 외부 환경변수나 Jenkins Credentials에 주입하는 것을 권장합니다.
+- Jenkins 실행 시 필요한 값은 [`jenkins.env.example`](jenkins.env.example) 를 기준으로 외부 환경변수나 Jenkins Credentials에 주입하는 것을 권장합니다.
 - `modules/EsToDB/Services` 아래 JSON은 구조 예시로 보고, 실제 운영값은 커밋 전에 반드시 placeholder 또는 비밀 저장소 참조 값으로 치환하세요.
 - `127.0.0.1:8000/register` 예시는 로컬에서 FastAPI 서버를 띄웠을 때만 접속됩니다. 예시 JSON 안의 외부 주소들은 API 접속 주소가 아니라 메타데이터용 샘플 값입니다.
 
